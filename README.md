@@ -6,9 +6,10 @@ In Progress : FEM problems stated in 3D
 INSTALLATION GUIDE:
 
 ```
-pip install mechy
+pip install mech
 ```
-```pip3 install mechy
+```
+pip3 install mechy
 ```
 
 Here is a demo code to display all outputs of a 2D Finite Element Analysis on a dogbone.
@@ -29,6 +30,6 @@ s.fem2d(FILE_PATH,plot_type)
 
 DOCUMENTATION:
 ```
-plot_type='all
+plot_type='all'
 ```
 Variable plot_type should be among the list of possible output demands : ['u1','u2','s11','s22','s12','e11','e22','e12','all']
