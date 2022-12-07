@@ -1,1 +1,1 @@
-from FEM import FEM
+from FEM import *

@@ -23,8 +23,8 @@ setup(
     install_requires=['numpy','matplotlib'],
     keywords=['python', 'engineering','finite element analysis','mechanics','stress','strain'],
     classifiers=[
-        "Development Status :: 2 - Development",
-        "Intended Audience :: Engineers and Scientists",
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Education",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
