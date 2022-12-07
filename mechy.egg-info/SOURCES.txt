@@ -1,0 +1,12 @@
+README.md
+setup.py
+mechy/FEM.py
+mechy/__init__.py
+mechy/fem.py
+mechy/fem3d.py
+mechy/untitled1.py
+mechy.egg-info/PKG-INFO
+mechy.egg-info/SOURCES.txt
+mechy.egg-info/dependency_links.txt
+mechy.egg-info/requires.txt
+mechy.egg-info/top_level.txt
