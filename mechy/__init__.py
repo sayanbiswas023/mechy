@@ -1,1 +1,1 @@
-from FEM import *
+from mechy.FEM import *
