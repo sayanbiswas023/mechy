@@ -2,4 +2,9 @@ mechy/3d_test.txt
 mechy/fem3d.py
 mechy/fem.py
 mechy/untitled1.py
+.vscode
+__pycache_
+dist
+build
+
 
