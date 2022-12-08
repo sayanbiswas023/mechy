@@ -23,10 +23,10 @@ s=FEM()
 s.fem2d(FILE_PATH,plot_type)
 ```
 
-![Displacement_X](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/u1.png)
-![stress_11](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/s11.png)
-![stress_22](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/s22.png)
-![strain_12](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/e12.png)
+![Displacement_X](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/u1.png)
+![stress_11](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/s11.png)
+![stress_22](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/s22.png)
+![strain_12](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/e12.png)
 
 DOCUMENTATION:
 ```
