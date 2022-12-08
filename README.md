@@ -1,9 +1,10 @@
 This package consists of functionalities useful for basic engineering studies.
 
 Current Implementation : Finite Element Analysis on 2D problems has been implemented.\
-In Progress : FEM problems stated in 3D.\
+In Progress : FEM problems stated in 3D.
 
 [Github Repo Link](https://github.com/sayanbiswas023/mechy)
+
 INSTALLATION GUIDE:
 
 ```
