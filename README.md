@@ -39,7 +39,9 @@ s.fem2d(FILE_PATH,plot_type)
 plot_type='all'
 ```
 Variable plot_type should be among the list of possible output demands :
-``` ['u1','u2','s11','s22','s12','e11','e22','e12','all'] 
+```
+ ['u1','u2','s11','s22','s12','e11','e22','e12','all'] 
+ 
 ```
 
 The input file format is similar to standard simulating softwares as abaqus
