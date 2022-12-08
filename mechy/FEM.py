@@ -27,6 +27,7 @@ class FEM:
         xi,eta = tuple(xi)
         N = [(1.0-xi)*(1.0-eta), (1.0+xi)*(1.0-eta), (1.0+xi)*(1.0+eta), (1.0-xi)*(1.0+eta)]
         return 0.25 * np.array(N)
+    
     def gradshape(self,xi):
         """Gradient of the shape functions for a 4-node, isoparametric element.
             dN_i(xi,eta)/dxi and dN_i(xi,eta)/deta
@@ -35,11 +36,13 @@ class FEM:
         dN = [[-(1.0-eta),  (1.0-eta), (1.0+eta), -(1.0+eta)],
               [-(1.0-xi), -(1.0+xi), (1.0+xi),  (1.0-xi)]]
         return 0.25 * np.array(dN)
+    
     def local_error(self,str):
         print("*** ERROR ***")
         print(str)
         sys.exit(3)
-    def read_inp_file(self,inpFileName, nodes, conn, boundary):
+        
+    def read_inp_file(self,inpFileName, nodes, conn, boundary,material):
         print('\n** Reading input file')
         inpFile = open(inpFileName, 'r')
         lines = inpFile.readlines()
@@ -58,6 +61,9 @@ class FEM:
                 continue
             if line.lower() == "*boundary":
                 state = 3
+                continue
+            if line.lower() == "*material":
+                state = 4
                 continue
             if state == 0:
                 continue
@@ -98,6 +104,12 @@ class FEM:
                 if dof2 == 2:
                     boundary.append([nodeNr,2,val])
                 continue
+            if state == 4:
+                values = line.split(",")
+                if len(values)!= 2:
+                    self.local_error("Missing material properties")
+                material.append(float(values[0]))
+                material.append(float(values[1]))
     
     def fem2d(self,FILE_PATH,plot_type):
         ##
@@ -106,11 +118,12 @@ class FEM:
         nodes = []
         conn = []
         boundary = []
+        material = []
         if FILE_PATH == None: self.local_error('No input file provided.')
         print('Input file:', FILE_PATH)
         avail=['u1','u2','s11','s22','s12','e11','e22','e12','all']
         if plot_type not in avail : self.local_error('Invalid Request')
-        self.read_inp_file(FILE_PATH, nodes, conn, boundary)
+        self.read_inp_file(FILE_PATH, nodes, conn, boundary,material)
         nodes = np.array(nodes)
         num_nodes = len(nodes)
         
@@ -121,8 +134,9 @@ class FEM:
         ###############################
         # Plane-strain material tangent (see Bathe p. 194)
         # C is 3x3
-        E = 100.0
-        v = 0.3
+        E = material[0]
+        v = material[1]
+        print("Material Property: ",material)
         C = E/(1.0+v)/(1.0-2.0*v) * np.array([[1.0-v, v, 0.0], [v, 1.0-v, 0.0], [0.0, 0.0, 0.5-v]])
         ###############################
         # Make stiffness matrix
