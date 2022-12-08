@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: mechy
-Version: 0.0.8
+Version: 0.0.9
 Summary: Core Engineering Analysis Functionalities
 Home-page: UNKNOWN
 Author: Sayan Biswas
@@ -22,7 +22,7 @@ This package consists of functionalities useful for basic engineering studies.
 Current Implementation : Finite Element Analysis on 2D problems has been implemented.\
 In Progress : Literally everything.
 
-[Github Repo Link](https://github.com/sayanbiswas023/mechy)
+[Github Repo Link](https://github.com/sayanbiswas023/mechy)\
 [Pypi link](https://pypi.org/project/mechy/)
 
 INSTALLATION GUIDE:
