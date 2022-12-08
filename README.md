@@ -38,4 +38,4 @@ plot_type='all'
 Variable plot_type should be among the list of possible output demands :
 ``` ['u1','u2','s11','s22','s12','e11','e22','e12','all'] ```
 
-![](https://media.tenor.com/rJ4wiVqdmcAAAAAC/sponge-bob-hammer.gif =400x400)
+<img src="https://media.tenor.com/rJ4wiVqdmcAAAAAC/sponge-bob-hammer.gif" width="400" height="400">
