@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: mechy
-Version: 0.0.10
+Version: 0.0.11
 Summary: Core Engineering Analysis Functionalities
 Home-page: UNKNOWN
 Author: Sayan Biswas
@@ -25,7 +25,7 @@ In Progress : Literally everything.
 [Github Repo Link](https://github.com/sayanbiswas023/mechy)\
 [Pypi link](https://pypi.org/project/mechy/)
 
-INSTALLATION GUIDE:
+#INSTALLATION GUIDE:
 
 ```
 pip install mech
@@ -34,6 +34,9 @@ pip install mech
 pip3 install mechy
 ```
 
+#DOCUMENTATION:
+
+##2D Finite Element Analysis
 Here is a demo code to display all outputs of a 2D Finite Element Analysis on a dogbone.
 
 ```
@@ -50,12 +53,41 @@ s.fem2d(FILE_PATH,plot_type)
 ![stress_22](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/s22.png)
 ![strain_12](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/e12.png)
 
-DOCUMENTATION:
+
 ```
 plot_type='all'
 ```
 Variable plot_type should be among the list of possible output demands :
-``` ['u1','u2','s11','s22','s12','e11','e22','e12','all'] ```
+``` ['u1','u2','s11','s22','s12','e11','e22','e12','all'] 
+```
+
+The input file format is similar to standard simulating softwares as abaqus
+
+```
+### Input file syntax:
+
+    *Material
+    500, 0.06             # E and nu
+    
+    *Node
+    1, 0.0, 0.0
+    2, 0.0, 1.0
+    3, 1.0, 1.0
+    4, 1.0, 0.0
+    
+    *Element
+    1, 1, 2, 3, 4        # elemId, nodeid of vertices
+    
+    *Step
+    *Boundary
+    1, 1, 2, 0.0          # nodeId, dof1, dof2, value
+    2, 1, 1, 0.0
+    3, 1, 1, 0.01
+    4, 1, 1, 0.01
+    4, 2, 2, 0.0
+```
+
+<br>
 
 <img src="https://media.tenor.com/rJ4wiVqdmcAAAAAC/sponge-bob-hammer.gif" width="500" height="400">
 
