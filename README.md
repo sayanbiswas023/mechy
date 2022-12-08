@@ -6,7 +6,7 @@ In Progress : Literally everything.
 [Github Repo Link](https://github.com/sayanbiswas023/mechy)\
 [Pypi link](https://pypi.org/project/mechy/)
 
-#INSTALLATION GUIDE:
+# INSTALLATION GUIDE:
 
 ```
 pip install mech
@@ -15,9 +15,9 @@ pip install mech
 pip3 install mechy
 ```
 
-#DOCUMENTATION:
+# DOCUMENTATION:
 
-##2D Finite Element Analysis
+## 2D Finite Element Analysis
 Here is a demo code to display all outputs of a 2D Finite Element Analysis on a dogbone.
 
 ```
