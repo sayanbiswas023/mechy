@@ -16,17 +16,17 @@ Here is a demo code to display all outputs of a 2D Finite Element Analysis on a 
 
 ```
 from mechy import FEM
-FILE_PATH='test.txt'
+FILE_PATH='demo_examples/2d_test.txt'
 plot_type='all'
 
 s=FEM()
 s.fem2d(FILE_PATH,plot_type)
 ```
 
-![Displacement_X](./mechy/images/u1.png)
-![stress_11](./mechy/images/s11.png)
-![stress_22](./mechy/images/s22.png)
-![strain_12](./mechy/images/e12.png)
+![Displacement_X](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/u1.png)
+![stress_11](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/s11.png)
+![stress_22](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/s22.png)
+![strain_12](https://github.com/sayanbiswas023/mechy/blob/master/mechy/images/e12.png)
 
 DOCUMENTATION:
 ```
