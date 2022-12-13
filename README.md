@@ -1,19 +1,17 @@
-This package consists of functionalities useful for basic engineering studies.
+This package consists of a few functionalities useful for basic engineering studies.
 
-Current Implementation : Finite Element Analysis on 2D problems has been implemented.\
-In Progress : Literally everything.
+**Current Version:** 0.0.11\
+**Current Implementation :** Finite Element Analysis on 2D problems has been implemented.\
+**In Progress :** Literally everything.
 
 [Github Repo Link](https://github.com/sayanbiswas023/mechy)\
 [Pypi link](https://pypi.org/project/mechy/)
 
 # INSTALLATION GUIDE:
-
-```
-pip install mech
-```
-```
-pip3 install mechy
-```
+Pip\
+`pip install mechy` or `pip3 install mechy`\
+Conda\
+`conda install mechy`
 
 # DOCUMENTATION:
 
@@ -35,14 +33,9 @@ s.fem2d(FILE_PATH,plot_type)
 ![strain_12](https://raw.githubusercontent.com/sayanbiswas023/mechy/master/mechy/images/e12.png)
 
 
-```
-plot_type='all'
-```
+`plot_type='all'`\
 Variable plot_type should be among the list of possible output demands :
-```
- ['u1','u2','s11','s22','s12','e11','e22','e12','all'] 
- 
-```
+`['u1','u2','s11','s22','s12','e11','e22','e12','all'] `
 
 The input file format is similar to standard simulating softwares as abaqus
 
